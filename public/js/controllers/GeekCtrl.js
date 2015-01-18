@@ -7,10 +7,20 @@ $scope.emailus = function() {
 			// validate the formData to make sure that something is there
 			// if form is empty, nothing will happen
 			// people can't just hold enter to keep adding the same to-do anymore
+	var atpos = $scope.email.indexOf("@");
+    var dotpos = $scope.email.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+
+        $scope.tagline = "message not sent, need valid email format";
+        
+    }
+    else
+    {
+
 
 				var maildata = {"name":$scope.name,"email":$scope.email,"subject":$scope.subject,"message":$scope.message};
 
-$scope.tagline = maildata.name;
+				
 
 				// // call the create function from our service (returns a promise object)
 				Geek.postEmail(maildata)
@@ -21,5 +31,7 @@ $scope.tagline = maildata.name;
 
 					});
 
-		};
+	};
+	
+	}
 });
