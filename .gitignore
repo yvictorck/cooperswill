@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 lib-cov
 *.seed
 *.log
@@ -15,3 +16,7 @@ npm-debug.log
 node_modules
 
 public/libs
+=======
+node_module/
+libs/
+>>>>>>> f1a3f4cc1a9fd42171bd11a4f9555a298caea2f8
