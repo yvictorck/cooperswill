@@ -30,6 +30,10 @@ app.use(gzippo.staticGzip('' + __dirname + '/public'));
 // app.use('/', routes);
 app.use('/nerds', nerds);
 
+
+app.use('*', gzippo.staticGzip('' + __dirname + '/public'));
+// app.use(routes.index);
+
 // routes ==================================================
 // require('./app/routes')(app); // pass our application into our routes
 
