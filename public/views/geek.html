@@ -1,17 +1,20 @@
 <div class="jumbotron text-center">
-	<h1>contact us</h1>
+	<!-- <h1>contact us</h1> -->
 
-	<p>{{ tagline }}</p>
+<h3>what u want</h3>
 
 
-      <form ng-submit="emailus()"
-        style="margin-top:30px;">
-        <h3>what u want</h3>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"><form ng-submit="emailus()"
+        style="//margin-top:30px;">
+        
 
         <div class="form-group">
           <input type="text"
             class="form-control"
             placeholder="name"
+            width="30px"
             ng-model="name"></input>
         </div>
         <div class="form-group">
@@ -28,11 +31,21 @@
         </div>
 
         <div class="form-group">
-          <input type="text"
+<!--           <input type="text"
           class="form-control"
           placeholder="message"
-          ng-model="message"></input>
+          ng-model="message"></input> -->
+
+		  <textarea type="text"
+          class="form-control"
+          placeholder="message"
+          ng-model="message" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">send</button>
-      </form>
+      </form></div>
+  <div class="col-md-4"></div>
+</div>
+	<p>{{ tagline }}</p>
+
+      
 </div>

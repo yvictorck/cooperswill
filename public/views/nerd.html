@@ -1,33 +1,54 @@
 <div class="jumbotron text-center">
-	<h1>Nerds and Proud</h1>
+	<h2>Nice little Blog</h2>
 
 	<p>{{ tagline }}</p>
-<!-- <p>{{ nerds }}</p> -->
 
-      <div ng-repeat="nerd in nerds">
-        <p>{{nerd.name}}</p>
-		<p>{{nerd.note}}</p>
+<!--  -->
+<div class="row">
+  <div class="col-md-6" style="margin-top:30px;">
 
+        <div style="margin-top:30px;" ng-repeat="nerd in nerds | reverse">
+        <p>Title: {{nerd.name}}</p>
+        <p>Content: {{nerd.note}}</p>
+        <p>-------------------------------------</p>
 
       </div>
 
-      <form ng-submit="createNerd()"
-        style="margin-top:30px;">
-        <h3>Add a new nerd</h3>
+  </div>
+
+
+  <div class="col-md-6" style="margin-top:30px;">
+  <form ng-submit="createNerd()">
+        <h3>Add a blog entry</h3>
 
         <div class="form-group">
           <input type="text"
             class="form-control"
-            placeholder="name"
+            placeholder="title"
             ng-model="name"></input>
         </div>
         <div class="form-group">
           <input type="text"
           class="form-control"
-          placeholder="note"
+          placeholder="content"
           ng-model="note"></input>
         </div>
         <button type="submit" class="btn btn-primary">create</button>
       </form>
+
+<p style="margin-top:30px;">Search: <input ng-model="searchText"></p>
+
+
+
+        <div style="margin-top:30px;" ng-repeat="nerd in nerds | filter:searchText", ng-show="searchText">
+        <p>Result Title: {{nerd.name}}</p>
+        <p>Result Content: {{nerd.note}}</p>
+        <p>===============================</p>
+
+      </div>
+
+
+  </div>
+</div>
 
 </div>

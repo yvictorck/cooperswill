@@ -1,6 +1,6 @@
 angular.module('GeekCtrl', []).controller('GeekController', function($scope, $http, Geek) {
 
-	$scope.tagline = 'The square root of life is pi!';	
+	$scope.tagline = '';	
 $scope.emailus = function() {
 
 
@@ -17,7 +17,7 @@ $scope.tagline = maildata.name;
 
 					// if successful creation, call our get function to get all the new todos
 					.success(function(data) {
-					 // $scope.tagline = data.sent;
+					   $scope.tagline = "message sent, Thank you!";
 
 					});
 

@@ -24,7 +24,7 @@ angular.module('NerdCtrl', []).controller('NerdController', function($scope,$htt
 
 					// if successful creation, call our get function to get all the new todos
 					.success(function(data) {
-					 $scope.tagline = newNerd;
+					 //$scope.tagline = newNerd;
 
 					  $scope.nerds.push({
 					    name: $scope.name,
@@ -34,6 +34,7 @@ angular.module('NerdCtrl', []).controller('NerdController', function($scope,$htt
 					});
 
 		};
+
 
 
 });
