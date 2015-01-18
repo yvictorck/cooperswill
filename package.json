@@ -7,6 +7,10 @@
 	"body-parser" : "~1.4.2",
 	"method-override" : "~2.0.2",
 	"gzippo": "*"
-  }
+  },
+"scripts": {
+  "start": "node server.js",
+  "postinstall": "bower install"
+}
 }
 
