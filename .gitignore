@@ -19,4 +19,5 @@ public/libs
 =======
 node_module/
 libs/
+.DS_Store
 >>>>>>> f1a3f4cc1a9fd42171bd11a4f9555a298caea2f8
