@@ -12,6 +12,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'views/nerd.html',
 			controller: 'NerdController'
 		})
+		.when('/projects', {
+			templateUrl: 'views/projects.html',
+			controller: 'ProjectsController'
+		})
 
 		.when('/geekss', {
 			templateUrl: 'views/geek.html',
