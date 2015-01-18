@@ -13,6 +13,7 @@ var db = require('./config/db');
 
 var routes = require('./app/routes/index');
 var nerds = require('./app/routes/nerd');
+var contactus = require('./app/routes/contactus');
 mongoose.connect(db.url); //mongodb://victor:victsor@ds031661.mongolab.com:31661/heroku_app26810511/test');
 
 var port = process.env.PORT || 8080; // set our port
@@ -29,6 +30,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(gzippo.staticGzip('' + __dirname + '/public'));
 // app.use('/', routes);
 app.use('/nerds', nerds);
+app.use('/contactus',contactus)
 
 
 app.use('*', gzippo.staticGzip('' + __dirname + '/public'));
