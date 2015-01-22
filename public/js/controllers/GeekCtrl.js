@@ -7,6 +7,7 @@ $scope.emailus = function() {
 			// validate the formData to make sure that something is there
 			// if form is empty, nothing will happen
 			// people can't just hold enter to keep adding the same to-do anymore
+
 	var atpos = $scope.email.indexOf("@");
     var dotpos = $scope.email.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=$scope.email.length) {
